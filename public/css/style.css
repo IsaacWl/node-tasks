@@ -1,0 +1,102 @@
+html {
+    background: -webkit-linear-gradient(80deg, #cff 50%, #2cf 50%);
+    background: -webkit-linear-gradient(#cff, #2cf);
+}
+p {
+    margin: 20px 0;
+    font-family: sans-serif;
+    color: #555555;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+.title {
+    background: #fffff5;
+    padding: 0 20px;
+    width: 80%;
+    box-shadow: 1px 1px 10px -5px;
+    color: #5555;
+    font-family: sans-serif;
+}
+.items {
+    display: flex;
+    flex-flow: column;
+    width: 80%;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    background-color: #fffff5;
+    box-shadow: 1px 1px 10px -5px;
+}
+.items-wrapper {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    max-height: 60vh;
+    overflow: hidden; 
+    overflow-y: scroll;
+    padding: 10px;
+}
+.items-wrapper::-webkit-scrollbar {
+    width: 10px;
+}
+.items-wrapper::-webkit-scrollbar-thumb {
+    background: #f1f1f1;
+}
+.item {
+    padding: 0 20px;
+    text-align: left;
+    border-bottom: 1px solid #f1f1f1;
+    display: flex;
+    gap: 20px;
+}
+.item:last-child {
+    border: none;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+}
+
+form [type="text"] {
+    border: none;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 10px 20px;
+    background: transparent;
+    outline: none;
+    transition: 200ms;
+}
+
+form [type="text"]:focus {
+    border-bottom: 2px solid #2cf;
+}
+
+form button {
+    border: 1px solid #f1f1f1;
+    height: 40px;
+    width: 40px;
+    background: #2cf;
+    border-radius: 50%;
+    transition: 200ms;   
+}
+
+form button:hover {
+    opacity: .6;
+}
+
+[type="checkbox"]:checked + p {
+    text-decoration: line-through;
+    text-decoration-color: #2cf;
+    color: #5555;
+}
+
+@media screen and (min-width: 1000px ) {
+    .items, .title {
+        width: 28%;
+    }
+}
