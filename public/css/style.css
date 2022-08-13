@@ -21,6 +21,7 @@ p {
     box-shadow: 1px 1px 10px -5px;
     color: #5555;
     font-family: sans-serif;
+    text-align: center;
 }
 .items {
     display: flex;
@@ -53,6 +54,8 @@ p {
     border-bottom: 1px solid #f1f1f1;
     display: flex;
     gap: 20px;
+    position: relative;
+    align-items: center;
 }
 .item:last-child {
     border: none;
@@ -93,6 +96,15 @@ form button:hover {
     text-decoration: line-through;
     text-decoration-color: #2cf;
     color: #5555;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    font-family: sans-serif;
+    color: #f55555;
+    cursor: pointer;
+    padding: 10px;
 }
 
 @media screen and (min-width: 1000px ) {

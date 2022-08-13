@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>home page</title>
 </head>
 
@@ -18,27 +18,29 @@
         </div>
     <div class="items">
         <div class="items-wrapper">
-
             <% for (const item of items) { %>
                 <div class="item">
-                    <% if (item.complete) { %>
-                        <input type="checkbox" id="check" key="<%= item.id %>" checked>
+                    <% if (item.completed) { %>
+                        <div class="close" key="<%= item._id %>" data-title="<%= title %>">
+                            &times;
+                        </div>        
+                        <input type="checkbox" id="check" key="<%= item._id %>" value="<%= title %>" checked>
                     <% } else { %>
-                        <input type="checkbox" id="check" key="<%= item.id %>"/>
-                    <% } %>        
+                        <input type="checkbox" id="check" key="<%= item._id %>" value="<%= title %>"/>
+                    <% } %>
                     <p>
-                        <%= item.title %>
+                        <%= item.item %>
                     </p>
                 </div>
                 <% } %>
         </div>
         <form class="form" action="/" method="post">
             <input type="text" name="item" placeholder="new item.." />
-            <button>+</button>
+            <button name="list" value="<%= title %>">+</button>
         </form>
         </div>
     </div>
-    <script src="js/script.js"></script> 
+    <script src="/js/script.js"></script> 
 </body>
 
 </html>
